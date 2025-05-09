@@ -1,0 +1,42 @@
+<HTML>
+    <BODY>
+        <DIV class="center">
+            <br/><br/>
+            <IMG src="img/logo.png" width="620" height="200"/><br/><br/><br/><br/><br/><br/><br/>
+            <input type="button" name="NUOVA PARTITA" id="NUOVA_PARTITA" value="NUOVA PARTITA" onclick="SBottone.play(); setTimeout(() => {location.href='gioco.html'},100); azzera()"/> <br/> <br/> 
+            <div id="DCONTINUA_PARTITA"><input type="button" name="CONTINUA PARTITA" id="CONTINUA_PARTITA" value="CONTINUA PARTITA" onclick="SBottone.play(); setTimeout(() => {location.href='gioco.html'},100)"/> <br/> <br/> </div>
+            <input type="button" name="imp" id="imp" value="impostazioni" onclick="SBottone.play(); setTimeout(() => {location.href='impostazioni.html'},100)"/> <br/> <br/> 
+            <input type="button" name="crediti" id="crediti" value="crediti" onclick="SBottone.play(); setTimeout(() => {location.href='crediti.html'},100)"/> <br/> <br/> 
+            <input type="button" name="stat" id="stat" value="statistiche" onclick="SBottone.play(); setTimeout(() => {location.href='statistiche.html'},100)"/> <br/> <br/> 
+            <input type="button" name="tut" id="tut" value="tutorial" onclick="SBottone.play(); setTimeout(() => {location.href='tutorial.html'},100)"/> 
+        </DIV>
+    </BODY>
+    <HEAD>
+        <style>
+            .center{
+                text-align: center;
+                           
+            } 
+            body {
+                background: rgb(84,25,66);
+                background-image: url('img/sfondo.png');
+            }
+            div{
+                color:rgb(255, 255, 255);
+            }
+        </style>
+        <script>
+            const SBottone = new Audio('audio/bottone.mp3');
+            const bottoneContinua = document.getElementById("DCONTINUA_PARTITA");
+            function azzera(){
+                localStorage.removeItem("griglia1");
+                localStorage.removeItem("griglia2");
+                localStorage.removeItem("turno");
+                localStorage.removeItem("blitz");
+            }
+            if(localStorage.getItem("griglia1") === null){
+                bottoneContinua.style.display = "none";
+            }
+        </script>
+    </HEAD>
+</HTML>

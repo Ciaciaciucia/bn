@@ -1,0 +1,47 @@
+<HTML>
+    <HEAD>
+        <link rel="stylesheet" href="style.css">
+    </HEAD>
+    <BODY>
+        
+        <DIV>
+            <input type="button" name="musica" id="bottone_musica" value="musica&#127900;" onclick="SBottone.play()"/>
+            <div id="impostazioni" style="height: 20px; width: 20px; background-image:url('img/impostazioni.png'); float:right;"></div>
+            <DIV class="centrobottone">
+                <h1> GIOCO</h1> 
+                <input type="button" name="menu" id="menu" value="menu" onclick="SBottone.play(); setTimeout(() => {location.href='index.html'},100)"/>
+                <input type="button" name="salvataggio" id="salvataggio" value="salva" onclick="SBottone.play()" style="display:none"/>
+            </DIV> <br/><br/><br/> <br/><br/><br/>
+            <div class="centrobottone" id="turno"></div><br/>
+            <div class="centrobottone" id="info"></div>
+            </DIV>
+        </DIV> <br/> 
+        <div id="zona_griglie"></div> <br/><br/>
+        <div class="zona_navi">
+            <div id="3" class="sottomarinom" draggable="true"></div>
+            <div id="3" class="sottomarinom"draggable="true"></div>
+            <div id="3" class="sottomarinom"draggable="true"></div>
+            <div id="3" class="sottomarinom"draggable="true"></div>
+            <div id="2" class="cacciatorpedinierem" draggable="true"></div>
+            <div id="2" class="cacciatorpedinierem" draggable="true"></div>
+            <div id="2" class="cacciatorpedinierem" draggable="true"></div>
+            <div id="1" class="corazzatam" draggable="true"></div>
+            <div id="1" class="corazzatam" draggable="true"></div>
+            <div id="0" class="portaereim" draggable="true"></div>
+        </div>      
+        <div class="centrobottone" style="display: flex;" id="zona_bottoni">
+            modalità blitz? <input type="checkbox" name="blitz" id="check_blitz" value="" onclick="blitz(isBlitz)"/>
+            <div style="margin-left: 45px"><input type="button" name="ruota" id="bottone_ruota" value="ruota"/>
+                <input type="button" name="random" id="bottone_random" value="mischia"/>
+                <input type="button" name="inizio" id="bottone_inizio" value="inizia" /></div>
+        </div>
+    </BODY>
+    <style>
+        body {
+            background: rgb(84,25,66);
+            background-image: url('img/sfondo.png');
+          
+        }
+    </style>
+    <script src="main.js" ></script>    
+</HTML>

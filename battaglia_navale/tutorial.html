@@ -1,0 +1,50 @@
+<HTML>
+    <HEAD>
+        <style>
+            .center{
+                text-align: center;
+            }
+            body {
+                background: rgb(84,25,66);
+                background-image: url('img/sfondo.png');
+            }
+            div{
+                color:rgb(255, 255, 255);
+            }
+        </style>
+        <script>
+            const SBottone = new Audio('audio/bottone.mp3');
+
+        </script>
+    </HEAD>
+    <BODY>
+        <DIV class="center">
+            <h1> TUTORIAL</h1>
+            <input type="button" name="menu" id="menu" value="menu"/ onclick="SBottone.play(); setTimeout(() => {location.href='index.html'},100)"/> <br/><br/>
+            <h2>PREPARAZIONE</h2>
+            Per iniziare a giocare, piazzare le proprie navi sulla griglia a sinistra: <br/>
+            Per ruotare le navi, è necessario premere il tasto "ruota".<br/>
+            Non è possibile piazzare le navi una affianco all'altra, neanche diagonalmente.<br/>
+            È possibile piazzare le navi casualmente premendo il tasto "mischia".<br/>
+            Una volta piazzate le navi, è possibile premere "inizia" per far iniziare la partita.<br/>
+            <IMG src="img/prep.gif"></IMG>
+            <h2>PARTITA</h2>
+            L'obbiettivo del gioco è distruggere tutte le navi del nemico.<br/>
+            Per farlo, è necessario cliccare con il tasto sinistro la cella della griglia nemica che si vuole attaccare.<br/>
+            Se diventa turchese, hai mancato :(. Se diventa rossa, ha colpito la nave nemica!<br/>
+            Una volta distrutta completamente una nave, verrà riprodotto un suono diverso e verrà comunicato al centro dello schermo.<br/>
+            <IMG src="img/gioco.gif"></IMG><br/>
+            Ogni turno è possibile attaccare una volta, dopo la quale attaccherà a sua volta il computer.<br/>
+            Quest'ultimo colpisce celle casuali finchè non prendere una nave, per poi bersagliare le celle circostanti fino a che non avrà avvondato la nave per intero.<br/>
+            <IMG src="img/AI.gif"></IMG><br/>
+            La modalità blitz permette ad entrambi i giocatori di continuare a colpire a meno che non manchino.<br/>
+            È possibile salvare la partita corrente premendo il tasto "salva". Tornare al menù con l'apposito tasto salva automaticamente la partita.
+            <h2>IMPOSTAZIONI</h2>
+            Nelle impostazioni è possibile regolare il proprio volume e il colore delle proprie navi. Queste impostazioni vengono salvate anche per successivi accessi al sito.<br/>
+            Il menù impostazioni è anche accessibile durante la partita attraverso l'ingranaggio in alto a destra,che può essere ripresa una volta modificate le impostazioni premendo il tasto "continua partita".
+            <h2>STATISTICHE</h2>
+            Il menù statistiche mostra alcune statistiche di gioco, salvate solo alla fine di una partita.
+        </DIV>
+        
+    </BODY>
+</HTML>

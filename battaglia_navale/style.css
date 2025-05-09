@@ -1,0 +1,116 @@
+div{
+    color:rgb(255, 255, 255);
+}
+
+
+
+.sottomarinom{
+    height:30px;
+    width:30px;
+    margin: 5px;
+    box-sizing: border-box;
+}
+.sottomarino{
+    
+}
+
+.cacciatorpedinierem{
+    height:30px;
+    width: 60px;
+    margin: 5px;
+    box-sizing: border-box;
+}
+.cacciatorpediniere{
+    
+}
+.corazzatam{
+    height:30px;
+    width: 90px;
+    margin: 5px;
+    box-sizing: border-box;
+}
+.corazzata{
+    
+}
+.portaereim{
+    height:30px;
+    width: 120px;
+    margin: 5px;
+    box-sizing: border-box;
+}
+.portaerei{
+    
+}
+ /* .nave{
+    background-color: grey;
+}
+    */
+.zona_navi{
+    height:140px;
+    width: 720px;
+    margin: 0 auto;
+    background-color: aqua;
+    border: 1px solid black;
+    box-sizing: border-box;
+    display:flex;
+    align-items: center;
+}
+.cella{
+    height: 30px;
+    width: 30px;
+    border: 1px solid black;
+    box-sizing: border-box;
+
+}
+
+.adiacente{
+}
+.evidenziata{
+    background-color: cadetblue;
+}
+.esploso{
+    background-color: red !important;
+}
+.pluff{
+    background-color:cadetblue;
+}
+
+
+
+.griglia{
+    height: 300px;
+    width: 300px;
+    display:flex;
+    flex-wrap: wrap;
+}
+
+#zona_griglie{
+    margin: 0 auto;
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+.center{
+    
+    border: 0px;
+    height: auto;
+    width: auto;
+}
+.centrobottone{
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent;
+    border:none;
+    height: auto;
+    width: auto;
+    display: inline;
+}

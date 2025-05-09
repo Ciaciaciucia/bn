@@ -1,0 +1,64 @@
+<HTML>
+    
+    <BODY>
+        <DIV class="center">
+            <h1> STATISTICHE</h1><br/>
+            <input type="button" name="menu" id="menu" value="menu"/ onclick="SBottone.play(); setTimeout(() => {location.href='index.html'},100)"/> <br/><br/>
+            <h2>
+            <div id="vittorie"></div><br/>
+            <div id="sconfitte"></div><br/>
+            <div id="rateo"></div><br/>
+            <div id="turni"></div><br/>
+            <div id="navi_sconfitte"></div><br/>
+            <div id="navi_perse"></div><br/>
+            </h2>
+        </DIV>
+    </BODY>
+    <HEAD>
+        <style>
+            .center{
+                text-align: center;
+            }
+            body {
+                background: rgb(84,25,66);
+                background-image: url('img/sfondo.png');
+            }
+            div{
+                color:rgb(255, 255, 255);
+            }
+        </style>
+        <script>
+            const SBottone = new Audio('audio/bottone.mp3');
+            function controlla(variabile){
+                if(variabile === null){
+                    variabile = 0;
+                }
+                return variabile;
+            }
+            const vittorie = document.getElementById("vittorie");
+            const sconfitte = document.getElementById("sconfitte");
+            const turni = document.getElementById("turni");
+            const naviSconfitte = document.getElementById("navi_sconfitte");
+            const naviPerse = document.getElementById("navi_perse");
+            const Rateo = document.getElementById("rateo");
+            let v = localStorage.getItem("vittorie");
+            v = controlla(v);
+            vittorie.textContent = "vittorie: "+v+"✅";
+            let s = localStorage.getItem("sconfitte");
+            s = controlla(s);
+            sconfitte.textContent = "sconfitte: "+s+"❌";
+            let t = localStorage.getItem("turni");
+            t = controlla(t);
+            turni.textContent ="turni minori per vincere: "+ t+"🕑";
+            let sc = localStorage.getItem("navisconfitte");
+            sc = controlla(sc);
+            naviSconfitte.textContent = "navi distrutte: "+sc+"💥";
+            let p = localStorage.getItem("naviperse");
+            p = controlla(p);
+            naviPerse.textContent ="navi perse: "+ p+"🫡";
+            rateo.textContent = "rapporto vittorie/sconfitte: " + v/s;
+
+
+        </script>
+    </HEAD>
+</HTML>
